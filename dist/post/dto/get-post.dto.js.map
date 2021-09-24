@@ -1,0 +1,1 @@
+{"version":3,"file":"get-post.dto.js","sourceRoot":"","sources":["../../../src/post/dto/get-post.dto.ts"],"names":[],"mappings":";;;AAEA,MAAa,UAAU;IAMnB,YAAmB,IAAU;QACzB,IAAI,CAAC,KAAK,GAAG,IAAI,CAAC,KAAK,CAAA;QACvB,IAAI,CAAC,OAAO,GAAG,IAAI,CAAC,OAAO,CAAA;QAC3B,IAAI,CAAC,SAAS,GAAG,IAAI,CAAC,SAAS,CAAA;QAC/B,IAAI,CAAC,QAAQ,GAAG,IAAI,CAAC,QAAQ,CAAA;IACjC,CAAC;CACJ;AAZD,gCAYC"}

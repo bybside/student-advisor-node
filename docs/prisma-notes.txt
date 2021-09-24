@@ -1,0 +1,7 @@
+Prisma Commands:
+- npx prisma init: initialize Prisma schema file
+- npx prisma db pull: generate Prisma schema from existing db schema
+- npx primsa generate: generate up-to-date Prisma Client (necessary after any Prisma schema update is made)
+- npx prisma migrate dev --name <migration_name>: map data model to db schema using Prisma Migrate
+  - executing migration will also run `npx prisma generate` and update @prisma/client
+  - this is necessary to keep application specific Prisma Client up-to-date

@@ -1,0 +1,15 @@
+Commands:
+- 
+
+Recommended Project Structure:
+- src/ contains main.ts and app.module.ts at level 0
+- contains sub-level directory for every feature module (e.g. src/<feature_module_name>/)
+- feature module directories contain files with the following naming convention:
+  - <feature_name>.<component_type>.ts (e.g. user.controller.ts)
+
+Creating Console Apps:
+- Nest can be used to create console apps that take advantage of all of its IoC (DI) and modularity features and more
+  - in main.ts:
+    - const app = await NestFactory.createApplicationContext(<root_app_module_name>)
+      <application logic here>
+      await app.close()

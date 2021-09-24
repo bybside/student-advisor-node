@@ -1,0 +1,1 @@
+{"version":3,"file":"student.module.js","sourceRoot":"","sources":["../../src/student/student.module.ts"],"names":[],"mappings":";;;;;;;;;AAAA,2CAAuC;AACvC,mDAAgD;AAChD,6DAAyD;AACzD,6DAAyD;AAWzD,IAAa,aAAa,GAA1B,MAAa,aAAa;CAAI,CAAA;AAAjB,aAAa;IAJzB,IAAA,eAAM,EAAC;QACJ,WAAW,EAAE,CAAC,sCAAiB,CAAC;QAChC,SAAS,EAAE,CAAC,sCAAiB,EAAE,sBAAS,CAAC;KAC5C,CAAC;GACW,aAAa,CAAI;AAAjB,sCAAa"}
