@@ -38,10 +38,11 @@ model Grade {
 }
 
 model Occupation {
-  id           Int       @id @default(autoincrement())
-  name         String?
-  medianSalary Int?
-  students     Student[]
+  id                    Int                     @id @default(autoincrement())
+  name                  String?
+  medianSalary          Int?
+  students              Student[]
+  careerFitByOccupation CareerFitByOccupation[]
 }
 
 model Semester {
@@ -52,28 +53,31 @@ model Semester {
 }
 
 model Student {
-  id           Int               @id @default(autoincrement())
-  firstName    String?
-  middleName   String?
-  lastName     String?
-  dob          DateTime?         @db.Date
-  gradYear     Int?
-  active       Boolean?
-  occupationId Int?
-  occupation   Occupation?       @relation(fields: [occupationId], references: [id], onDelete: NoAction, onUpdate: NoAction)
-  grades       Grade[]
-  snapshots    StudentSnapshot[]
+  id                 Int                  @id @default(autoincrement())
+  firstName          String?
+  middleName         String?
+  lastName           String?
+  dob                DateTime?            @db.Date
+  gradYear           Int?
+  active             Boolean?
+  occupationId       Int?
+  occupation         Occupation?          @relation(fields: [occupationId], references: [id], onDelete: NoAction, onUpdate: NoAction)
+  grades             Grade[]
+  snapshots          StudentSnapshot[]
+  careerFitByStudent CareerFitByStudent[]
 }
 
 model StudentSnapshot {
-  id             Int                  @id @default(autoincrement())
-  cumulativeGpa  Float                @db.Real
-  classRank      Int?
-  historicalRank Int?
-  createdAt      DateTime             @default(now())
-  studentId      Int?
-  student        Student?             @relation(fields: [studentId], references: [id], onDelete: NoAction, onUpdate: NoAction)
-  performances   SubjectPerformance[]
+  id                    Int                     @id @default(autoincrement())
+  cumulativeGpa         Float                   @db.Real
+  classRank             Int?
+  historicalRank        Int?
+  createdAt             DateTime                @default(now())
+  studentId             Int?
+  student               Student?                @relation(fields: [studentId], references: [id], onDelete: NoAction, onUpdate: NoAction)
+  performances          SubjectPerformance[]
+  careerFitByStudent    CareerFitByStudent[]
+  careerFitByOccupation CareerFitByOccupation[]
 }
 
 model Subject {
@@ -92,4 +96,26 @@ model SubjectPerformance {
   subject    Subject         @relation(fields: [subjectId], references: [id], onDelete: NoAction, onUpdate: NoAction)
 
   @@id([subjectId, snapshotId])
+}
+
+model CareerFitByStudent {
+  totalScore BigInt
+  scoreRank  BigInt
+  studentId  Int
+  snapshotId Int
+  student    Student         @relation(fields: [studentId], references: [id], onDelete: NoAction, onUpdate: NoAction)
+  snapshot   StudentSnapshot @relation(fields: [snapshotId], references: [id], onDelete: NoAction, onUpdate: NoAction)
+
+  @@id([studentId, snapshotId])
+}
+
+model CareerFitByOccupation {
+  totalScore   BigInt
+  scoreRank    BigInt
+  occupationId Int
+  snapshotId   Int
+  occupation   Occupation      @relation(fields: [occupationId], references: [id], onDelete: NoAction, onUpdate: NoAction)
+  snapshot     StudentSnapshot @relation(fields: [snapshotId], references: [id], onDelete: NoAction, onUpdate: NoAction)
+
+  @@id([occupationId, snapshotId])
 }
