@@ -6,17 +6,18 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.AppModule = void 0;
+exports.CareerFitModule = void 0;
 const common_1 = require("@nestjs/common");
-const career_fit_module_1 = require("./career-fit/career-fit.module");
-const student_snapshot_module_1 = require("./student-snapshot/student-snapshot.module");
-const student_module_1 = require("./student/student.module");
-let AppModule = class AppModule {
+const db_service_1 = require("../data/db.service");
+const career_fit_controller_1 = require("./career-fit.controller");
+const career_fit_repository_1 = require("./career-fit.repository");
+let CareerFitModule = class CareerFitModule {
 };
-AppModule = __decorate([
+CareerFitModule = __decorate([
     (0, common_1.Module)({
-        imports: [student_module_1.StudentModule, student_snapshot_module_1.StudentSnapshotModule, career_fit_module_1.CareerFitModule]
+        controllers: [career_fit_controller_1.CareerFitController],
+        providers: [career_fit_repository_1.CareerFitRepository, db_service_1.DbService]
     })
-], AppModule);
-exports.AppModule = AppModule;
-//# sourceMappingURL=app.module.js.map
+], CareerFitModule);
+exports.CareerFitModule = CareerFitModule;
+//# sourceMappingURL=career-fit.module.js.map

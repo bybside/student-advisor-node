@@ -1,0 +1,1 @@
+{"version":3,"file":"get-career-fit-by-student.dto.js","sourceRoot":"","sources":["../../../src/career-fit/dto/get-career-fit-by-student.dto.ts"],"names":[],"mappings":";;;AAEA,MAAa,wBAAwB;IAIjC,YAAmB,SAA6B;QAE5C,IAAI,CAAC,SAAS,GAAG,MAAM,CAAC,SAAS,CAAC,SAAS,CAAC,CAAA;QAC5C,IAAI,CAAC,SAAS,GAAG,SAAS,CAAC,SAAS,CAAA;IACxC,CAAC;CACJ;AATD,4DASC"}

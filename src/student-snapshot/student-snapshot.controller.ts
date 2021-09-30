@@ -1,7 +1,6 @@
 import { Controller, Get, Param, ParseIntPipe } from "@nestjs/common";
 import { StudentSnapshot } from "@prisma/client";
 import { GetStudentSnapshotDto } from "./dto/get-student-snapshot.dto";
-// import { GetStudentSnapshotDto } from "./dto/get-student-snapshot.dto";
 import { StudentSnapshotRepository } from "./student-snapshot.repository";
 
 @Controller("student-snapshots")

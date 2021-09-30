@@ -1,0 +1,1 @@
+{"version":3,"file":"get-career-fit-by-occupation.dto.js","sourceRoot":"","sources":["../../../src/career-fit/dto/get-career-fit-by-occupation.dto.ts"],"names":[],"mappings":";;;AAEA,MAAa,2BAA2B;IAIpC,YAAmB,SAAgC;QAE/C,IAAI,CAAC,SAAS,GAAG,MAAM,CAAC,SAAS,CAAC,SAAS,CAAC,CAAA;QAC5C,IAAI,CAAC,YAAY,GAAG,SAAS,CAAC,YAAY,CAAA;IAC9C,CAAC;CACJ;AATD,kEASC"}
