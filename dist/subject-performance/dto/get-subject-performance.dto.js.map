@@ -1,0 +1,1 @@
+{"version":3,"file":"get-subject-performance.dto.js","sourceRoot":"","sources":["../../../src/subject-performance/dto/get-subject-performance.dto.ts"],"names":[],"mappings":";;;AAEA,MAAa,wBAAwB;IAIjC,YAAmB,WAA+B;QAC9C,IAAI,CAAC,OAAO,GAAG,WAAW,CAAC,OAAO,CAAA;QAClC,IAAI,CAAC,SAAS,GAAG,WAAW,CAAC,SAAS,CAAA;IAC1C,CAAC;CACJ;AARD,4DAQC"}
